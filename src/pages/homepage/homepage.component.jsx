@@ -1,4 +1,5 @@
 import Banner from "../../components/banner/banner.component";
+import Gallery from "../../components/gallery/gallery.component";
 
 const Homepage = () => {
   const title = "Chez vous, partout et ailleurs";
@@ -6,7 +7,7 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <Banner title={title}></Banner>
-      <p>gallery</p>
+      <Gallery />
     </div>
   );
 };

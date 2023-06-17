@@ -1,0 +1,19 @@
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__img {
+    height: 340px;
+    width: 340px;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #fff;
+    font-size: 18px;
+  }
+}

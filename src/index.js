@@ -10,6 +10,7 @@ import Header from "./components/header/header.component";
 import Homepage from "./pages/homepage/homepage.component";
 import About from "./pages/about/about.component";
 import Error from "./pages/error/error.component";
+import Footer from "./components/footer/footer.component";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );

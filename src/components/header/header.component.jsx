@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import logo from "../../assets/logo-kasa.png";
 
 import "./header.styles.scss";
@@ -5,10 +7,14 @@ import "./header.styles.scss";
 const Header = () => (
   <div className="header">
     <img src={logo} alt="Kasa" className="header__logo" />
-    <div className="header__links">
-      <p className="header__link">Accueil</p>
-      <p className="header__link">A propos</p>
-    </div>
+    <nav className="header__links">
+      <Link to="/" className="header__link">
+        Accueil
+      </Link>
+      <Link to="/about" className="header__link">
+        A propos
+      </Link>
+    </nav>
   </div>
 );
 
