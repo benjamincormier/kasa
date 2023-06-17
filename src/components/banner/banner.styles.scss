@@ -1,0 +1,19 @@
+.banner {
+  width: 100%;
+  border-radius: 25px;
+  padding: 50px;
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../../assets/banner.jpg");
+  //   background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  &__title {
+    font-size: 48px;
+    color: #fff;
+  }
+}
