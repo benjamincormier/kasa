@@ -14,5 +14,16 @@
   }
 
   &__link {
+    // margin-left: 50px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited,
+    active {
+      color: currentColor;
+    }
   }
 }

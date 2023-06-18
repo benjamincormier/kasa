@@ -5,6 +5,8 @@ import "./accomodation.styles.scss";
 
 import Collapse from "../../components/collapse/collapse.component";
 import Carousel from "../../components/carousel/carousel.component";
+import Rating from "../../components/rating/rating.component";
+import Tag from "../../components/tag/tag.component";
 
 const Accomodation = () => {
   const { id } = useParams();
@@ -43,11 +45,11 @@ const Accomodation = () => {
 
       <div className="flex-row">
         <div className="accomodation__tags">
-          {tags.map((tag) => (
-            <p className="accomodation__tag">{tag}</p>
+          {tags.map((label) => (
+            <Tag key={label} label={label} />
           ))}
         </div>
-        <div className="accomodation__rating">{rating}</div>
+        <Rating stars={rating} />
       </div>
       <div className="flex-row">
         <Collapse title="description" description={description} />
