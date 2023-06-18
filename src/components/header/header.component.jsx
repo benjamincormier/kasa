@@ -6,7 +6,9 @@ import "./header.styles.scss";
 
 const Header = () => (
   <div className="header">
-    <img src={logo} alt="Kasa" className="header__logo" />
+    <Link to="/" className="header__link">
+      <img src={logo} alt="Kasa" className="header__logo" />
+    </Link>
     <nav className="header__links">
       <Link to="/" className="header__link">
         Accueil

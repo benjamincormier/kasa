@@ -3,6 +3,9 @@ import galleryData from "../../assets/logements.json";
 
 import "./accomodation.styles.scss";
 
+import Collapse from "../../components/collapse/collapse.component";
+import Carousel from "../../components/carousel/carousel.component";
+
 const Accomodation = () => {
   const { id } = useParams();
   const selectedAccomodation = galleryData.find((item) => item.id === id);
@@ -20,7 +23,8 @@ const Accomodation = () => {
   } = selectedAccomodation;
   return (
     <div className="accomodation">
-      <img className="accomodation__cover" src={cover} alt={title} />
+      {/* <img className="accomodation__cover" src={cover} alt={title} /> */}
+      <Carousel title={title} pictures={pictures} />
 
       <div className="flex-row">
         <div className="accomodation__name">
@@ -44,6 +48,9 @@ const Accomodation = () => {
           ))}
         </div>
         <div className="accomodation__rating">{rating}</div>
+      </div>
+      <div className="flex-row">
+        <Collapse title="description" description={description} />
       </div>
     </div>
   );
