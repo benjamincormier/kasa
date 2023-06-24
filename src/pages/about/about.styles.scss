@@ -17,10 +17,9 @@
   }
 
   &__dropdowns-container {
-    width: 80%;
     display: flex;
     flex-direction: column;
-
-    // mettre une marge sur tous enfants sauf dernier
+    margin: 0 auto;
+    width: 80%;
   }
 }

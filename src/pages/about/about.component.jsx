@@ -1,10 +1,10 @@
 import Collapse from "../../components/collapse/collapse.component";
 
+import "./about.styles.scss";
+
 const About = () => (
   <div className="about">
-    <div className="about__banner">
-      <h1>BANNER</h1>
-    </div>
+    <div className="about__banner"></div>
     <div className="about__dropdowns-container">
       <Collapse
         title="Fiabilité"
