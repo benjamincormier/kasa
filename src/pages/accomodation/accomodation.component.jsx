@@ -51,8 +51,13 @@ const Accomodation = () => {
         </div>
         <Rating stars={rating} />
       </div>
-      <div className="flex-row">
-        <Collapse title="description" description={description} />
+      <div className="flex-row flex-start">
+        <div className="collapse-container">
+          <Collapse title="Description" details={description} />
+        </div>
+        <div className="collapse-container">
+          <Collapse title="Équipements" details={equipments} />
+        </div>
       </div>
     </div>
   );

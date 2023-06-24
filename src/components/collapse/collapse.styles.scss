@@ -1,5 +1,50 @@
 .collapse {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+
   &__menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__arrow--down {
+    transform: rotate(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+
+  &__arrow--up {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+
+  &__details {
+  }
+
+  &__txt--open {
+    max-height: 300px;
+    opacity: 1;
+    padding: 10px;
+    background-color: #f6f6f6;
+    transition: all 0.2s;
+  }
+
+  &__txt--collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 10px;
+    padding-top: 0;
+    background-color: #fff;
+    transition: all 0.2s;
   }
 }
