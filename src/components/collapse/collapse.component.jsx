@@ -8,7 +8,7 @@ const Collapse = (props) => {
   const { title, details } = props;
   let detailsTxt = "";
 
-  console.log(typeof props.details);
+  // console.log(typeof props.details);
 
   if (typeof props.details === "object") {
     detailsTxt = details.join("\r\n");

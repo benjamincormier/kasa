@@ -5,8 +5,11 @@
   color: #fff;
   align-items: center;
   padding: 40px;
+  margin-top: 40px;
+  max-width: 1440px;
 
   &__logo {
     width: 120px;
+    margin-bottom: 30px;
   }
 }

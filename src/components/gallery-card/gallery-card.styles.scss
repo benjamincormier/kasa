@@ -1,11 +1,12 @@
 .gallery-card {
   position: relative;
-  border-radius: 10px;
+
   overflow: hidden;
 
   &__img {
     height: 340px;
     width: 340px;
+    border-radius: 10px;
     object-fit: cover;
   }
 

@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 20px 0px;
+  padding: 20px 0px 20px 0px;
   font-size: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
 
   &__logo {
     width: 210px;

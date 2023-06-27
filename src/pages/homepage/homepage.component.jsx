@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import "./homepage.styles.scss";
+
 import logements from "../../assets/logements.json";
 
 import Banner from "../../components/banner/banner.component";
