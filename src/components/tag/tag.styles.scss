@@ -5,3 +5,13 @@
   border-radius: 10px;
   padding: 5px 10px 5px 10px;
 }
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 10px;
+  }
+}

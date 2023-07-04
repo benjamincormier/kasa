@@ -23,14 +23,28 @@
     &--active {
       text-decoration: underline;
     }
+  }
+}
 
-    /*  &:hover {
-      
-    } */
+/*************************
+* PHONES < 768px
+*************************/
 
-    /*  &:visited,
-    &:active {
-      color: currentColor;
-    } */
+@media (max-width: 768px) {
+  .header {
+    max-width: 90vw;
+    font-size: 12px;
+
+    &__logo {
+      width: 145px;
+    }
+
+    &__links {
+      text-transform: uppercase;
+    }
+
+    &__link {
+      margin-left: 20px;
+    }
   }
 }

@@ -18,3 +18,27 @@
     position: absolute;
   }
 }
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .banner {
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+      margin-left: 25px;
+    }
+
+    &__img {
+      height: 110px;
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+}

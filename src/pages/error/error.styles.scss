@@ -11,14 +11,33 @@
   & > h2 {
     font-size: 36px;
     margin-bottom: 120px;
+    text-align: center;
   }
 
   &__link {
     color: currentColor;
     font-size: 18px;
     margin-bottom: 120px;
-    /*     &:active,
-    &:visited {
-    } */
+  }
+}
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .error {
+    & > img {
+      width: 200px;
+    }
+
+    & > h2 {
+      width: 260px;
+      font-size: 18px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
   }
 }

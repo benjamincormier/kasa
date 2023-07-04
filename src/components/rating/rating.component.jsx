@@ -18,9 +18,19 @@ const Rating = ({ stars }) => {
     <div className="rating">
       {starsArray.map((item, index) =>
         item === "*" ? (
-          <img key={index} src={starActive} alt="active star"></img>
+          <img
+            className="rating__star"
+            key={index}
+            src={starActive}
+            alt="active star"
+          ></img>
         ) : (
-          <img key={index} src={starInactive} alt="inactive star"></img>
+          <img
+            className="rating__star"
+            key={index}
+            src={starInactive}
+            alt="inactive star"
+          ></img>
         )
       )}
     </div>

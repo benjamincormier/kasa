@@ -6,7 +6,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__arrow {
@@ -24,5 +24,21 @@
 
   &__prev {
     left: 10px;
+  }
+}
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .carousel {
+    &__img--active {
+      height: 255px;
+    }
+
+    &__arrow {
+      width: 25px;
+    }
   }
 }

@@ -18,3 +18,15 @@
     font-size: 18px;
   }
 }
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .gallery-card {
+    &__img {
+      height: 255px;
+    }
+  }
+}

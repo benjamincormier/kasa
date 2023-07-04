@@ -8,3 +8,14 @@
   background-color: #f7f7f7;
   border-radius: 25px;
 }
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .gallery {
+    background-color: transparent;
+    padding: 0px;
+  }
+}

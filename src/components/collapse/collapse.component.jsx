@@ -32,7 +32,11 @@ const Collapse = (props) => {
       <div className="collapse__menu" onClick={toggle}>
         <h3 className="collapse__title">{title}</h3>
         <img
-          className={isOpen ? "collapse__arrow--down" : "collapse__arrow--up"}
+          className={
+            isOpen
+              ? "collapse__arrow collapse__arrow--down"
+              : "collapse__arrow collapse__arrow--up"
+          }
           src={downArrow}
           alt=""
         />

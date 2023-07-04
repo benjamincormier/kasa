@@ -2,14 +2,37 @@
   display: flex;
   flex-direction: column;
   background-color: #000;
-  color: #fff;
   align-items: center;
+  justify-content: center;
   padding: 40px;
   margin-top: 40px;
   max-width: 1440px;
 
+  &__copyright {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+  }
+
   &__logo {
     width: 120px;
     margin-bottom: 30px;
+  }
+}
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .footer {
+    &__copyright {
+      font-size: 12px;
+      width: 40%;
+    }
+    &__logo {
+      width: 120px;
+      margin-bottom: 15px;
+    }
   }
 }

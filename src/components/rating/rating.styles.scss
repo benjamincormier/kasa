@@ -1,3 +1,18 @@
 .rating {
   display: flex;
+  &__star {
+    width: 36px;
+  }
+}
+
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .rating {
+    &__star {
+      width: 18px;
+    }
+  }
 }

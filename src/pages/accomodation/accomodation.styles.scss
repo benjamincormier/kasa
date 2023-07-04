@@ -2,20 +2,31 @@
   max-width: 1240px;
   margin: 0 auto;
 
-  &__cover {
-    height: 415px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    margin-bottom: 30px;
+  &__flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    align-items: stretch;
+  }
+
+  &__details {
+  }
+
+  &__details-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__title {
     font-size: 36px;
+    margin-bottom: 5px;
   }
 
   &__location {
     font-size: 18px;
+    margin-bottom: 25px;
   }
 
   &__host {
@@ -41,19 +52,61 @@
     display: flex;
     gap: 10px;
   }
+
+  &__flex-container-collapses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__collapse-container {
+    width: 48%;
+  }
 }
 
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
+/*************************
+* PHONES < 768px
+*************************/
 
-.flex-start {
-  align-items: flex-start;
-}
+@media (max-width: 768px) {
+  .accomodation {
+    width: 90vw;
 
-.collapse-container {
-  width: 48%;
+    &__flex-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__details-right {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__location {
+      font-size: 14px;
+    }
+
+    &__host {
+      &-name {
+        font-size: 12px;
+        width: 80px;
+      }
+
+      &-picture {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &__flex-container-collapses {
+      flex-direction: column;
+    }
+    &__collapse-container {
+      width: 100%;
+    }
+  }
 }

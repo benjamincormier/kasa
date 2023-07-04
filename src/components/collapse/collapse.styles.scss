@@ -17,6 +17,11 @@
     color: #fff;
   }
 
+  &__arrow {
+    height: 32px;
+    margin-right: 5px;
+  }
+
   &__arrow--down {
     transform: rotate(0);
     transform-origin: center;
@@ -25,12 +30,7 @@
 
   &__arrow--up {
     transform: rotate(180deg);
-    transform-origin: center;
     transition: transform 0.3s;
-  }
-
-  &__details {
-    // padding: 10px;
   }
 
   &__details--open {
@@ -49,21 +49,19 @@
     background-color: #fff;
     transition: all 0.2s;
   }
+}
 
-  /*   &__txt--open {
-    max-height: 300px;
-    opacity: 1;
-    padding: 10px;
-    background-color: #f6f6f6;
-    transition: all 0.2s;
+/*************************
+* PHONES < 768px
+*************************/
+
+@media (max-width: 768px) {
+  .collapse {
+    &__title {
+      font-size: 13px;
+    }
+    &__arrow {
+      width: 24px;
+    }
   }
-
-  &__txt--collapsed {
-    max-height: 0;
-    opacity: 0;
-    padding: 10px;
-    padding-top: 0;
-    background-color: #fff;
-    transition: all 0.2s;
-  } */
 }

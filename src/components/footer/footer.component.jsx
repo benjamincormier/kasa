@@ -5,7 +5,7 @@ import "./footer.styles.scss";
 const Footer = () => (
   <footer className="footer">
     <img src={logo} alt="Kasa" className="footer__logo" />
-    <h3>© 2020 Kasa. All rights reserved</h3>
+    <h3 className="footer__copyright">© 2020 Kasa. All rights reserved</h3>
   </footer>
 );
 
