@@ -8,7 +8,7 @@ import "./about.styles.scss";
 const About = () => (
   <div className="about">
     <Banner title="" img={bannerImg} />
-    <div className="about__dropdowns-container">
+    <div className="about__collapses-container">
       <Collapse
         title="Fiabilité"
         details="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont

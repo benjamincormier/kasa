@@ -1,7 +1,7 @@
 .collapse {
   width: 100%;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   overflow: hidden;
 
   &__menu {
@@ -57,6 +57,9 @@
 
 @media (max-width: 768px) {
   .collapse {
+    &__menu {
+      padding: 4px;
+    }
     &__title {
       font-size: 13px;
     }

@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import galleryData from "../../assets/logements.json";
+import data from "../../assets/logements.json";
 
 import "./accomodation.styles.scss";
 
@@ -10,32 +11,28 @@ import Tag from "../../components/tag/tag.component";
 
 const Accomodation = () => {
   const { id } = useParams();
-  const selectedAccomodation = galleryData.find((item) => item.id === id);
+  const [accomodation, setAccomodation] = useState(null);
 
-  const {
-    title,
-    cover,
-    pictures,
-    description,
-    host,
-    rating,
-    location,
-    equipments,
-    tags,
-  } = selectedAccomodation;
-  return (
+  useEffect(() => {
+    const result = data.find((item) => item.id === id);
+    setAccomodation(result);
+  }, [id]);
+
+  if (!accomodation) {
+    return null;
+  }
+
+  return accomodation ? (
     <div className="accomodation">
-      {/* <img className="accomodation__cover" src={cover} alt={title} /> */}
-      <Carousel title={title} pictures={pictures} />
-
+      <Carousel title={accomodation.title} pictures={accomodation.pictures} />
       <div className="accomodation__flex-container">
         <div className="accomodation__details accomodation__details-left">
           <div className="accomodation__name">
-            <h1 className="accomodation__title">{title}</h1>
-            <h2 className="accomodation__location">{location}</h2>
+            <h1 className="accomodation__title">{accomodation.title}</h1>
+            <h2 className="accomodation__location">{accomodation.location}</h2>
           </div>
           <div className="accomodation__tags">
-            {tags.map((label) => (
+            {accomodation.tags.map((label) => (
               <Tag key={label} label={label} />
             ))}
           </div>
@@ -43,35 +40,28 @@ const Accomodation = () => {
 
         <div className="accomodation__details accomodation__details-right">
           <div className="accomodation__host">
-            <h3 className="accomodation__host-name">{host.name}</h3>
+            <h3 className="accomodation__host-name">
+              {accomodation.host.name}
+            </h3>
             <img
               className="accomodation__host-picture"
-              src={host.picture}
-              alt={host.name}
+              src={accomodation.host.picture}
+              alt={accomodation.host.name}
             />
           </div>
-          <Rating stars={rating} />
+          <Rating stars={accomodation.rating} />
         </div>
       </div>
-
-      <div className="flex-row">
-        {/* <div className="accomodation__tags">
-          {tags.map((label) => (
-            <Tag key={label} label={label} />
-          ))}
-        </div> */}
-      </div>
-
-      <div className="accomodation__flex-container--collapses">
+      <div className="accomodation__collapses-container">
         <div className="accomodation__collapse-container">
-          <Collapse title="Description" details={description} />
+          <Collapse title="Description" details={accomodation.description} />
         </div>
         <div className="accomodation__collapse-container">
-          <Collapse title="Équipements" details={equipments} />
+          <Collapse title="Équipements" details={accomodation.equipments} />
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Accomodation;
