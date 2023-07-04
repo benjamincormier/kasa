@@ -22,23 +22,27 @@ const Carousel = ({ pictures, title }) => {
 
   return (
     <div className="carousel">
-      <img
-        onClick={prevImg}
-        src={leftArrow}
-        alt="previous"
-        className="carousel__prev carousel__arrow"
-      />
+      {pictures.length > 1 && (
+        <img
+          onClick={prevImg}
+          src={leftArrow}
+          alt="previous"
+          className="carousel__prev carousel__arrow"
+        />
+      )}
       <img
         className="carousel__img--active"
         src={pictures[currentIndex]}
         alt={title}
       />
-      <img
-        onClick={nextImg}
-        src={rightArrow}
-        alt="next"
-        className="carousel__next carousel__arrow"
-      />
+      {pictures.length > 1 && (
+        <img
+          onClick={nextImg}
+          src={rightArrow}
+          alt="next"
+          className="carousel__next carousel__arrow"
+        />
+      )}
     </div>
   );
 };

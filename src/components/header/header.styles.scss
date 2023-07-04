@@ -18,14 +18,19 @@
   &__link {
     margin-left: 50px;
     text-decoration: none;
+    color: #ff6060;
 
-    &:hover {
+    &--active {
       text-decoration: underline;
     }
 
-    &:visited,
-    active {
+    /*  &:hover {
+      
+    } */
+
+    /*  &:visited,
+    &:active {
       color: currentColor;
-    }
+    } */
   }
 }

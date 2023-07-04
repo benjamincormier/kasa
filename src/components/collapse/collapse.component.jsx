@@ -10,12 +10,12 @@ const Collapse = (props) => {
 
   // console.log(typeof props.details);
 
-  if (typeof props.details === "object") {
-    detailsTxt = details.join("\r\n");
+  /* if (typeof props.details === "object") {
+    detailsTxt = details.join("<br>");
     console.log(detailsTxt);
   } else {
     detailsTxt = details;
-  }
+  } */
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,23 +29,24 @@ const Collapse = (props) => {
 
   return (
     <div className="collapse">
-      <div className="collapse__menu">
+      <div className="collapse__menu" onClick={toggle}>
         <h3 className="collapse__title">{title}</h3>
         <img
           className={isOpen ? "collapse__arrow--down" : "collapse__arrow--up"}
           src={downArrow}
-          onClick={toggle}
           alt=""
         />
       </div>
-      <div className="collapse__details">
-        <p
-          className={
-            isOpen ? "collapse__txt--open" : "collapse__txt--collapsed"
-          }
-        >
-          {detailsTxt}
-        </p>
+      <div
+        className={
+          isOpen ? "collapse__details--open" : "collapse__details--collapsed"
+        }
+      >
+        {typeof details === "object" ? (
+          details.map((item) => <p>{item}</p>)
+        ) : (
+          <p>{details}</p>
+        )}
       </div>
     </div>
   );

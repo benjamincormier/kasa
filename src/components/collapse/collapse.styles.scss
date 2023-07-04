@@ -30,9 +30,27 @@
   }
 
   &__details {
+    // padding: 10px;
   }
 
-  &__txt--open {
+  &__details--open {
+    max-height: 300px;
+    opacity: 1;
+    padding: 10px;
+    background-color: #f6f6f6;
+    transition: all 0.2s;
+  }
+
+  &__details--collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 10px;
+    padding-top: 0;
+    background-color: #fff;
+    transition: all 0.2s;
+  }
+
+  /*   &__txt--open {
     max-height: 300px;
     opacity: 1;
     padding: 10px;
@@ -47,5 +65,5 @@
     padding-top: 0;
     background-color: #fff;
     transition: all 0.2s;
-  }
+  } */
 }
