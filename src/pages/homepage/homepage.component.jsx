@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./homepage.styles.scss";
 
 import logements from "../../assets/logements.json";
+import bannerImg from "../../assets/banner-v2.jpg";
 
 import Banner from "../../components/banner/banner.component";
 import Gallery from "../../components/gallery/gallery.component";
@@ -18,7 +19,7 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <Banner title={title}></Banner>
+      <Banner title={title} img={bannerImg}></Banner>
       <Gallery data={data} />
     </div>
   );

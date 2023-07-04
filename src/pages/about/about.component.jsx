@@ -1,10 +1,13 @@
+import bannerImg from "../../assets/about-banner-v2.jpg";
+
 import Collapse from "../../components/collapse/collapse.component";
+import Banner from "../../components/banner/banner.component";
 
 import "./about.styles.scss";
 
 const About = () => (
   <div className="about">
-    <div className="about__banner"></div>
+    <Banner title="" img={bannerImg} />
     <div className="about__dropdowns-container">
       <Collapse
         title="Fiabilité"
