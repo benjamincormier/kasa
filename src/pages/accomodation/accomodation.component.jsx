@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../../assets/logements.json";
 
 import "./accomodation.styles.scss";
@@ -12,14 +12,16 @@ import Tag from "../../components/tag/tag.component";
 const Accomodation = () => {
   const { id } = useParams();
   const [accomodation, setAccomodation] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const result = data.find((item) => item.id === id);
+    if (!result) setError(true);
     setAccomodation(result);
-  }, [id]);
+  }, [id, accomodation]);
 
-  if (!accomodation) {
-    return null;
+  if (error) {
+    return <Navigate to="/404" replace={true} />;
   }
 
   return accomodation ? (
